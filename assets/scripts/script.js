@@ -63,3 +63,33 @@ function tooltipFN() {
     }
 }
 tooltipFN()
+
+/*ANIMATED SCROLL */
+function scrollAnimeFN() {
+    const sections = document.querySelectorAll('.js-scroll')
+    const winMidle = window.innerHeight * 0.64
+    function animaScroll() {
+        sections.forEach(sec => {
+            const secTop = sec.getBoundingClientRect().top - winMidle
+            secTop < 0 ? sec.classList.add('ativo') : secTop
+        })
+    }
+    animaScroll()
+    window.addEventListener('scroll', animaScroll)
+}
+scrollAnimeFN()
+
+/*CALCULATE HORARIO */
+function horarioDisp() {
+    const dateNow = new Date
+    const horario = document.querySelector('.horario')
+    console.log(dateNow.getHours())
+    if(horario) {
+        if(dateNow.getHours() > 18 ) {
+            horario.append(`FECHADOS`)
+        } else {
+            horario.append(`FUNCIONANDO`)
+        }
+    }
+}
+horarioDisp()
