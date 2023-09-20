@@ -1,0 +1,509 @@
+
+.nav {
+    max-width: 1980px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
+    align-items: center;
+    padding: 16px 72px;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: var(--cor-p7);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.nav-list {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+}
+.nav-list a {
+    margin: 14px;
+    padding: 16px;
+    gap: 6px;
+    color: var(--cor-p3);
+    font-weight: 600;
+    font-size: 1.05rem;
+    letter-spacing: .15px;
+    transition: .3s ease;
+}
+.nav-list li {
+    padding: 16px;
+}
+.nav-list a:hover {
+    background-color: var(--cor-p6);
+    color: var(--cor-p2);
+    border-radius: 3px;
+}
+
+.scheduleNow {
+    background-color: var(--cor-p3);
+    color: var(--cor-p9) !important;
+    transition: .3s;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+.scheduleNow:hover {
+    background-color: var(--cor-p2) !important;
+    color: var(--cor-p8) !important;
+}
+/*HAMBURGUER*/
+.menu-hamburguer {
+    border: none;
+    display: none;
+    background: none;
+    border-top: 3px solid var(--cor-p3);
+    cursor: pointer;
+}
+.menu-hamburguer::before, .menu-hamburguer::after {
+    content: ' ';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--cor-p3);
+    position: relative;
+    transition: .3s;
+    margin-top: 5px;
+}
+
+
+/*HEADER*/
+.first-container {
+    background-image: url(../../img/bg-green.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 72px;
+}
+
+.first-container-text h1 {
+    font-size: 3.8rem;
+    color: var(--cor-p4);
+    font-weight: bold;
+    letter-spacing: -.5px;
+}
+.first-container-text p {
+    font-size: 1.5rem;
+    color: var(--cor-p4);
+    font-weight: 600;
+    letter-spacing: .25px;
+}
+.first-container-btn {
+    margin-top: 36px;
+}
+.first-container-btn a {
+    background-color: var(--cor-p4);
+    padding: 16px 32px;
+    margin-left: 14px;
+    color: var(--cor-p8);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.25px;
+    border-radius: 4px;
+    /* box-shadow: 2px 2px 3px rgba(0, 0, 0, .25); */
+    
+}
+
+
+/*AREA SAUDE*/
+.area-saude-container {
+    max-width: 1920px;
+    padding: 36px 0px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.area-saude-text {
+    max-width: 800px;
+}
+.area-saude-text h2 {
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: var(--cor-p3);
+}
+.area-saude-text p {
+    margin-top: 18px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--cor-p2);
+}
+
+/*NOSSAS VANTAGENS*/
+.area-vantagens-container {
+    margin-top: 120px;
+}
+.area-vantagens-text {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+}
+.area-vantagens-text h2 {
+    padding-bottom: 16px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: var(--cor-p3);
+}
+.area-vantagens-text p {
+    padding-bottom: 32px;
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+    color: var(--cor-p2);
+}
+
+.area-vantagens-cardG {
+    background-color: var(--cor-p5);
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 90vw;
+    height: 35vh;
+    max-width: 1640px;
+}
+.area-vantagens-card-text {
+    text-align: center;
+    padding: 16px 0px;
+}
+.area-vantagens-card-text h3 {
+    font-size: 1.8rem;
+    color: var(--cor-p2);
+    letter-spacing: 0.7px;
+}
+.vantagens-numb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 22px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.vantagem-card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+    padding: 16px;
+}
+.vantagem-card h3 {
+    font-size: 2rem;
+    color: var(--cor-p8);
+    font-weight: bold;
+}
+.vantagem-card p {
+    font-size: 1.07rem;
+    color: var(--cor-p3);
+}
+/*AREA SERVIÇO HOME*/
+.area-servico-containerH {
+    margin-top: 120px;
+    padding: 0px 64px;
+}
+.area-servico-textH h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--cor-p3);
+}
+.area-servico-textH p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--cor-p2);
+    max-width: 1200px;
+    margin-top: 18px;
+}
+.area-servico-cardH {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.servico-cardH {
+    border: 2px solid var(--cor-p4);
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 56px 42px;
+    margin-top: 32px;
+}
+.servico-cardH p {
+    font-size: 1.3rem;
+    letter-spacing: 0.25px;
+    padding: 12px;
+    color: var(--cor-p3);
+}
+.servico-cardH span {
+    font-size: 0.95rem;
+    letter-spacing: .15px;
+    text-align: center;
+    color: var(--cor-p2);
+} 
+.btnVerServico {
+    text-align: center;
+    margin: 64px 0px;
+}
+.btnVerServico a {
+    background-color: var(--cor-p3);
+    color: var(--cor-p8);
+    padding: 16px 32px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.25px;
+    border-radius: 4px;
+    /* box-shadow: 2px 2px 3px rgba(0, 0, 0, .25); */
+}
+/*FOOTER*/
+.footer {
+    background-color: var(--cor-p7);
+    padding: 12px 64px;
+}
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-container-text {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 84px;
+}
+.footer-ct h3 {
+    font-size: 1.1rem;
+    padding-bottom: 8px;
+    color: var(--cor-p3);
+    font-weight: 700;
+}
+.footer-ct p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cor-p4);
+}
+
+@media(max-width: 1050px) {
+    .nav {
+        justify-content: space-between;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 999;
+    }
+    .menu-hamburguer {
+        display: block;
+        z-index: 1;
+    }
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 50vw;
+        height: 100vh;
+        background: var(--cor-p7);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+    
+        pointer-events: none;
+    }
+    .nav-list a {
+        font-size: 24px;
+        padding: 22px;
+        margin: 0px;
+        opacity: 0;
+    }
+    .nav-list li:nth-child(1) a {
+        transition: .5s .2s;
+    }
+    .nav-list li:nth-child(2) a {
+        transition: .5s .4s;
+    }
+    .nav-list li:nth-child(3) a {
+        transition: .5s .6s;
+    }
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+        
+    }
+    .nav.active .nav-list a {
+        opacity: 1;
+    }
+    .nav.active .menu-hamburguer {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+    .nav.active .menu-hamburguer::before {
+        transform: rotate(135deg); 
+    }
+    .nav.active .menu-hamburguer::after {
+        transform: rotate(-135deg); 
+        top: -7px;
+    }
+    /*AREA SAUDE*/
+    .area-saude-container {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 24px 0px;
+    }
+    .area-saude-img img {
+        padding-top: 64px;
+        width: 450px;
+    }
+    /*AREA VANTAGENS HOME*/
+    .vantagens-numb  {
+        flex-direction: column;
+        align-items: start;
+    }
+    .area-vantagens-cardG {
+        height: 60vh;
+        width: 85vw;
+    }
+    .vantagem-card {
+        align-items: start;
+        max-width: 400px;
+        padding-left: 24px;
+    }
+    .vantagem-card + .vantagem-card {
+        border-top: 1px solid var(--cor-p8);
+        padding-top: 12px;
+        margin: 0px;
+        width: 35vh;
+    }
+    /*VANTAGENS NUMB*/
+    .vantagens-numb {
+        flex-wrap: wrap;
+        padding: 0px;
+        margin: 0px;
+    }
+    .vantagem-card {
+        padding-top: 0px;
+        margin: 0px;
+    }
+    .area-vantagens-card-text p {
+        padding-bottom: 32px;
+    }
+    /*footer*/
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-block: 12px;
+    }
+    .footer-container-text {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: nowrap;
+        padding-block: 22px;
+    }
+}
+@media(max-width: 640px) {
+    
+    .first-container, .area-servico-containerH {
+        padding: 32px;
+    }
+    .area-saude-container {
+        margin: 32px;
+    }
+}
+@media(max-width: 460px) {
+    .nav-list a {
+        font-size: 16px;
+    }
+    .first-container h1 {
+        font-size: 2.5rem;
+    }
+    .first-container p {
+        font-size: 1.2rem;
+    }
+    .first-container-btn {
+        display: flex;
+        gap: 14px;
+        flex-direction: row;
+    }
+    .area-saude-text h2 {
+        font-size: 1.7rem;
+    }
+    .first-container, .area-servico-containerH {
+        padding: 20px;
+    }
+    .area-saude-container {
+        margin: 20px;
+    }
+    .area-saude-img img {
+        width: 100%;
+    }
+    .area-vantagens-text h2, .area-servico-textH h3 {
+        font-size: 1.7rem;
+    }
+    .area-vantagens-text p, .area-servico-textH p {
+        font-size: 1rem;
+    }
+    .area-vantagens-card-text h3 {
+        font-size: 1.3rem;
+    }
+    .area-vantagens-card-text p {
+        font-size: .75rem;
+    } 
+    .area-vantagens-cardG  {
+        height: 80vh;
+    }
+}
+@media(max-width: 380px) {
+    .nav-list a {
+        font-size: 12px;
+    }
+    .first-container h1 {
+        font-size: 2rem;
+    }
+    .first-container p {
+        font-size: 1rem;
+    }
+    .first-container-btn a {
+        padding: 12px 24px;
+    }
+    .area-saude-text h2, .area-vantagens-text h2, .area-servico-textH h3  {
+        font-size: 1.4rem;
+    }
+    .area-saude-text p, .area-vantagens-text p, .area-servico-textH p  {
+        font-size: .85rem;
+    }
+    .area-vantagens-text p {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .area-vantagens-cardG  {
+        height: 90%;
+    }
+    .area-servico-containerH, .area-vantagens-container {
+        margin-top: 24px;
+    }
+    .vantagem-card h3 {
+        font-size: 1.7rem;
+    }
+    .vantagem-card p {
+        font-size: .95rem;
+    }
+}

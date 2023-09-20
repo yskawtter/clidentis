@@ -1,0 +1,8 @@
+RESOLVER AMANHA:
+-Descobrir como alinhar o nome certinho na parte "areas"
+-Ajeitar o mobile
+
+
+TASK APÓS TERMINAR CODIFICAÇÃO;
+-Padronizar a parte mobile, com fontes iguais (de tamanho, como titulo e txt)
+-Ajeitar o footer
