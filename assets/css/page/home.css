@@ -168,7 +168,7 @@
     border-radius: 5px;
     margin: 0 auto;
     width: 90vw;
-    height: 35vh;
+    height: 400px;
     max-width: 1640px;
 }
 .area-vantagens-card-text {
@@ -351,7 +351,7 @@
         opacity: 1;
     }
     .nav.active .menu-hamburguer {
-        position: fixed;
+        /* position: fixed; */
         top: 26px;
         right: 16px;
         border-top-color: transparent;
@@ -380,7 +380,7 @@
         align-items: start;
     }
     .area-vantagens-cardG {
-        height: 70vh;
+        height: 700px;
         width: 85vw;
     }
     .vantagem-card {
@@ -475,10 +475,10 @@
         font-size: .75rem;
     } 
     .area-vantagens-cardG  {
-        height: 80vh;
+        height: 700px;
     }
 }
-@media(max-width: 380px) {
+@media(max-width: 400px) {
     .nav-list a {
         font-size: 12px;
     }
@@ -502,7 +502,7 @@
         margin: 0 auto;
     }
     .area-vantagens-cardG  {
-        height: 90%;
+        height: 810px;
     }
     .area-servico-containerH, .area-vantagens-container {
         margin-top: 24px;

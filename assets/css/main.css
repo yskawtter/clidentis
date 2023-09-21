@@ -24,7 +24,7 @@ li {
     transition: .3s;
 }
 
-.overlay {
+.overlay, .overlayModal {
     display: initial;
     position: fixed;
     height: 92%;
@@ -35,7 +35,7 @@ li {
     bottom: 0;
     background-color: rgba(0, 0, 0, .5);
 }
-.closeOverlay {
+.closeOverlay, .displayModalHidden {
     display: none;
 }
 .footer {

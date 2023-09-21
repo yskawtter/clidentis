@@ -1,3 +1,4 @@
+
 .localizacao-container {
     /* margin-top: 128px; */
     margin-top: 128px;
@@ -97,6 +98,7 @@
     margin: 64px auto;
     padding-block: 32px;
     border-radius: 5px;
+    position: relative;
 }
 .agende-card-avaliacao-form {
     display: flex;
@@ -143,6 +145,16 @@
     color: var(--cor-p8);
     border-radius: 4px;
 }
+.avisoError {
+    max-width: 450px;
+    margin: 0 auto;
+    padding-top: 12px;
+    color: rgb(161, 18, 18);
+    font-weight: bold;
+}
+.blockError {
+    display: none;
+}
 .mapa {
     padding: 0px;
     margin: 0px;
@@ -162,6 +174,41 @@
     top: 0;
     left: 0;
 }
+.modal {
+    top: 25%;
+    left: 25%;
+    background-color: var(--cor-p4);
+    text-align: center;
+    position: fixed;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    z-index: 123;
+    margin-right: 32px;
+}
+.modal h3 {
+   color: var(--cor-p8);
+   padding: 0px 24px;
+}
+.buttonHomeModal {
+    margin-top: 32px;
+}
+.modal a {
+    margin-top: 32px;
+    padding: 12px;
+    background-color: var(--cor-p8);
+    text-decoration: none;
+    color: var(--cor-p3);
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.hidden {
+    display: none;
+}
 
 @media(max-width: 640px) {
     .localizacao-card-info {
@@ -171,6 +218,9 @@
         max-width: 500px;
         margin: 0 auto;
         padding: 0px;
+    }
+    .modal {
+        max-width: 350px;
     }
 }
 @media(max-width: 450px) {
@@ -184,7 +234,7 @@
         padding: 0px;
     }
     .agende-card-avaliacao {
-        max-width: 300px;
+        max-width: 350px;
         padding: 0px;
     }
     .agende-card-avaliacao-form div input {
@@ -201,5 +251,8 @@
     .info-card:nth-child(2) {
         border-top: 1px solid var(--cor-p5);
         padding-block: 22px;
+    }
+    .mapa img {
+        width: 64vw;
     }
 }

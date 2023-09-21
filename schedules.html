@@ -86,18 +86,21 @@
                 <div class="agende-card-avaliacao-form">
                     <div>
                         <label for="">NOME</label>
-                        <input type="text">
+                        <input type="text" id="nomeInput">
                     </div>
                     <div>
                         <label for="">EMAIL</label>
-                        <input type="email">
+                        <input type="email" id="emailInput">
                     </div>
                     <div class="telefone">
                         <label for="">TELEF</label>
-                        <input type="tel">
+                        <input type="tel" id="telefoneInput">
                     </div>
 
-                   
+                </div>
+
+                <div class="avisoError">
+   
                 </div>
 
                 <div class="avisoSpan">
@@ -105,12 +108,23 @@
                 </div>
 
                <div class="buttonAgendar">
-                <a href="./schedules.html">AGENDAR</a>
+                <a class="btnSendSchedules" href="./schedules.html">AGENDAR</a>
                </div>
+
+               
             </div>
+
+
         </section>
 
-
+        <article class="modal hidden">
+            <div class="modal-container">
+                <h3>Parabéns por se cadastrar :) em breve entraremos em contato com você</h3>
+                <div class="buttonHomeModal">
+                    <a href="./index.html">VOLTAR A HOME</a>
+                </div>
+            </div>
+            </article>
     </main>
  
     <footer class="footer">
@@ -137,7 +151,8 @@
             </div>
         </div>
     </footer>
-    <div class="closeOverlay"></div>
+    
+    <div class="closeOverlay displayModalHidden"></div>
     <script src="./assets/scripts/script.js"></script>
 </body>
 </html>

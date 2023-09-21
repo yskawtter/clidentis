@@ -7,6 +7,7 @@ const overlay = document.querySelector('.closeOverlay')
 menuH.addEventListener('click', () => {
     nav.classList.toggle('active')
     overlay.classList.remove('closeOverlay')
+    overlay.classList.remove('displayModalHidden')
     overlay.classList.toggle('overlay')
 })
 overlay.addEventListener('click', function(e) {
@@ -139,3 +140,62 @@ function animaNumerosFN() {
 }
 }
 animaNumerosFN()
+
+function verifyEmptFields() {
+    const agendeContainer = document.querySelector('.agende-container')
+
+    if(agendeContainer) {
+
+    const nomeInput = document.querySelector('#nomeInput')
+    const emailInput = document.querySelector('#emailInput')
+    const telefoneInput = document.querySelector('#telefoneInput')
+    const btnSS = document.querySelector('.btnSendSchedules')
+    const avisoError = document.querySelector('.avisoError')
+    const p = document.createElement('p')
+
+    const modal = document.querySelector('.modal')
+    const overlay = document.querySelector('.displayModalHidden')
+    const nav = document.querySelector('.nav')
+    
+
+    btnSS.addEventListener('click', (e) => {
+        e.preventDefault()
+        if(nomeInput.value === '') {
+            elementsError('*Por favor, preencha o campo nome')
+            return
+        } else if(emailInput.value === '' && telefoneInput.value === '') {
+            elementsError('*Por favor, preencha o campo Email ou Telefone')
+            return
+        }
+        
+        modal.classList.remove('hidden')
+        overlay.classList.remove('closeOverlay')
+        overlay.classList.remove('displayModalHidden')
+        overlay.classList.toggle('overlayModal')
+
+        overlay.addEventListener('click', function(e) {
+            const target = e.target
+            console.log(target.getAttribute('class'))
+            if(target.className === 'overlayModal') {
+                modal.classList.add('hidden')
+                overlay.classList.toggle('overlayModal')
+            }
+                            
+            if(target.getAttribute('class') === 'overlayModal overlay') {
+                target.classList.remove('overlay')
+                modal.classList.add('hidden')
+                nav.classList.toggle('active')
+                overlay.classList.toggle('overlayModal')
+            }
+        })
+    })
+
+    function elementsError(text) {
+        p.innerText = text
+        avisoError.classList.remove('blockError')
+        avisoError.appendChild(p)
+        setTimeout(() => avisoError.classList.add('blockError'), 3000)
+    }
+}
+}
+verifyEmptFields()
