@@ -177,17 +177,19 @@
 .modal {
     top: 25%;
     left: 25%;
+    right: 25%;
+    bottom: 25%;
     background-color: var(--cor-p4);
     text-align: center;
     position: fixed;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 35vh;
     z-index: 123;
-    margin-right: 32px;
+    margin-right: 0px 40px;
 }
 .modal h3 {
    color: var(--cor-p8);
@@ -195,6 +197,10 @@
 }
 .buttonHomeModal {
     margin-top: 32px;
+}
+.modal h2 {
+    padding-bottom: 12px;
+    color: var(--cor-p9);
 }
 .modal a {
     margin-top: 32px;
@@ -211,6 +217,15 @@
 }
 
 @media(max-width: 640px) {
+    .modal {
+        top: 13%;
+        left: 13%;
+        right: 20%;
+        bottom: 13%;
+    }
+    .localizacao-container {
+        padding: 0px 20px;
+    }
     .localizacao-card-info {
         grid-template-columns: 1fr;
     }
@@ -221,16 +236,25 @@
     }
     .modal {
         max-width: 350px;
+        top: 25%;
+        left: 25%;
     }
 }
 @media(max-width: 450px) {
-
+    .modal {
+        left: 11%;
+        right: 11%;
+        bottom: 11%;
+    }
+    .agende-container  {
+        padding: 0 20px;
+    }
     .localizacao-card-info {
         grid-template-columns: 1fr;
     }
     .localizacao-container-infos{
         max-width: 330px;
-        margin: 0 auto;
+        margin: 0 14px;
         padding: 0px;
     }
     .agende-card-avaliacao {
@@ -254,5 +278,13 @@
     }
     .mapa img {
         width: 64vw;
+    }
+}
+@media(max-width: 380px) {
+    .modal {
+        left: 5%;
+        right: 5%;
+        bottom: 5%;
+        height: 350px;
     }
 }

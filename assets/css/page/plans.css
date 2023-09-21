@@ -196,6 +196,9 @@
     }
 }
 @media(max-width: 640px) {
+    .planos-container  {
+        padding: 24px 24px;
+    }
     .plans-cards-cont {
         grid-template-columns: 1fr;
         padding: 22px;

@@ -89,7 +89,6 @@ scrollAnimeFN()
 function horarioDisp() {
     const dateNow = new Date
     const horario = document.querySelector('.horario')
-    console.log(dateNow.getHours())
     if(horario) {
         if(dateNow.getHours() > 18 ) {
             horario.append(`FECHADOS`)
@@ -157,6 +156,7 @@ function verifyEmptFields() {
     const overlay = document.querySelector('.displayModalHidden')
     const nav = document.querySelector('.nav')
     
+    const modalContainerText = document.querySelector('.modal-container h3')
 
     btnSS.addEventListener('click', (e) => {
         e.preventDefault()
@@ -167,6 +167,7 @@ function verifyEmptFields() {
             elementsError('*Por favor, preencha o campo Email ou Telefone')
             return
         }
+        modalContainerText.innerText = `Ficamos felizes por confiar em nosso trabalho, ${nomeInput.value} :) em breve entraremos em contato com você via ${emailInput.value !== '' ? `email` : `telefone`}. `
         
         modal.classList.remove('hidden')
         overlay.classList.remove('closeOverlay')
@@ -175,7 +176,6 @@ function verifyEmptFields() {
 
         overlay.addEventListener('click', function(e) {
             const target = e.target
-            console.log(target.getAttribute('class'))
             if(target.className === 'overlayModal') {
                 modal.classList.add('hidden')
                 overlay.classList.toggle('overlayModal')

@@ -151,3 +151,17 @@
         max-width: 300px;
     }
 }
+@media(max-width: 720px) {
+    .areas-container-text {
+        margin: 0px 24px;
+    }
+    .faq-container {
+        margin: 0px 24px;
+    }
+    .faq-c {
+        margin: 0px;
+    }
+    .faq-c p {
+        margin-right: 24px;
+    }
+}
