@@ -71,7 +71,12 @@ function scrollAnimeFN() {
     function animaScroll() {
         sections.forEach(sec => {
             const secTop = sec.getBoundingClientRect().top - winMidle
-            secTop < 0 ? sec.classList.add('ativo') : secTop
+            const secVisible = (secTop - winMidle) < 0
+            if(secVisible) {
+                sec.classList.add('ativo')
+            } else if (sec.classList.contains('ativo')) {
+                sec.classList.remove('ativo')
+            }
         })
     }
     animaScroll()
@@ -93,3 +98,44 @@ function horarioDisp() {
     }
 }
 horarioDisp()
+
+/* FAQ ANSWER */
+function FaqFN() {
+    const FAQs = document.querySelectorAll('.faq-c')
+    FAQs.forEach(faq => faq.addEventListener('click', () => faq.childNodes[3].classList.toggle('answer')))
+}
+FaqFN()
+
+/* ANIMAR NUMEROS DINAMICAMENTE */
+function animaNumerosFN() {
+    const obsvTarget = document.querySelector('.vantagens-numb')
+    if(obsvTarget) {
+        function anNum()  {
+                const numbGen = document.querySelectorAll('.numbGen')
+                numbGen.forEach(num => {
+                    const total = +num.innerText
+                    const incremento = total < 16 ? Math.floor(total / 4) : Math.floor(total / 90)
+                    let start = 0
+                    const timer = setInterval(() => {
+                        start += incremento
+                        num.innerText = start
+                        if(start > total) {
+                            num.innerText = total
+                            clearInterval(timer)
+                        }
+                    }, 64 * Math.random())
+                })
+        }
+
+
+        function handleMutatin(mutation) {
+            if(mutation[0].target.classList.contains('ativo')) {
+                obsv.disconnect()
+                anNum()
+            }
+        }
+        const obsv = new MutationObserver(handleMutatin)
+        obsv.observe(obsvTarget, {attributes: true})
+}
+}
+animaNumerosFN()
